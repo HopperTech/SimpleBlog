@@ -5,6 +5,7 @@ using SimpleBlog.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Prism.Unity;
+using SimpleBlog.Services;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace SimpleBlog
@@ -32,6 +33,7 @@ namespace SimpleBlog
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage>();
             containerRegistry.RegisterForNavigation<Blog>();
+            containerRegistry.RegisterSingleton<SimpleBlogRepository>();
         }
     }
 }
